@@ -1,0 +1,1 @@
+Autoplay withput rendering betterPlayer causes almost same jank as rendering it
