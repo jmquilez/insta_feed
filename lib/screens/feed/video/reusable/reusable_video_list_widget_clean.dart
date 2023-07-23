@@ -115,6 +115,7 @@ class _ReusableVideoListWidgetCleanState
     }
     if (controller != null) {
       await controller!.pause();
+      //EVENT LISTENER RELATED JANK??
       controller!.removeEventsListener(onPlayerEvent);
       BpRegistryElem? elem = widget.videoListController!.getElem(controller!);
       widget.videoListController!.freeBetterPlayerController(elem);

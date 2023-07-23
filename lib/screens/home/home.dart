@@ -79,7 +79,7 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
               icon: Icon(Icons.sailing_rounded,
                   color: _page == 3 ? primaryColor : secondaryColor),
-              label: 'Non-autoplay-render',
+              label: 'Non-autoplay-rd',
               backgroundColor: primaryColor,
             ),
           ],
