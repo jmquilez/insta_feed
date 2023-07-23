@@ -78,7 +78,7 @@ class _HomeState extends State<Home> {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.sailing_rounded,
-                  color: _page == 3 ? primaryColor : secondaryColor),
+                  color: _page == 4 ? primaryColor : secondaryColor),
               label: 'Non-autoplay-rd',
               backgroundColor: primaryColor,
             ),
