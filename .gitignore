@@ -42,3 +42,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Files that use flutter smooth (requires custom engine)
+# lib/screens/feed/video/feed_video_integration_smooth.dart

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:insta_feed/screens/home/home.dart';
 import 'package:insta_feed/utils/colors.dart';
-import 'package:smooth/smooth.dart';
+//import 'package:smooth/smooth.dart';
 
 void main() {
-  SmoothWidgetsFlutterBinding.ensureInitialized();
+  //SmoothWidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -14,12 +14,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    //TODO: SmoothParent??
+    return /*SmoothParent(
+      child: */
+        MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: mobileBackgroundColor,
       ),
       home: const Home(),
+      //),
     );
   }
 }

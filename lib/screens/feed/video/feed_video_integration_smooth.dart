@@ -1,4 +1,4 @@
-import 'dart:async';
+/*import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
 
@@ -17,7 +17,7 @@ import 'package:intl/intl.dart';
 import 'package:keframe/keframe.dart';
 import 'package:logger/logger.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:smooth/smooth.dart';
+//import 'package:smooth/smooth.dart';
 
 //TODO: stop video rendering when scrolling is too fast
 
@@ -187,7 +187,7 @@ class _FeedVideoIntegrationSmoothState
               child: /*const Text(
                   "Hello")*/
                   //TODO, NOTE, KEY: CRASHES IF CHILD ELEMENTS ARE TOO SMALL
-                  SmoothListView.builder(
+                  ListView.builder(
                       //FOR MEMORY OPTIMIZATION --> set to false
                       ////addAutomaticKeepAlives: true, //false
                       ////shrinkWrap: false, //true
@@ -204,10 +204,10 @@ class _FeedVideoIntegrationSmoothState
                       /*physics: //CustomPhysics(),
                         const BouncingScrollPhysics(), //const ClampingScrollPhysics(),*/
                       //TODO, NOTE: does it improve performance?
-                      placeholder: PreferredSize(
+                      /*placeholder: PreferredSize(
                         preferredSize: const Size(double.infinity, 700),
                         child: Container(height: 700),
-                      ), //TODO: CHANGE FROM 800 TO 550 OR 600 (CHECK NON-SMOOTH LISTVIEW ITEMEXTENT)
+                      ), //TODO: CHANGE FROM 800 TO 550 OR 600 (CHECK NON-SMOOTH LISTVIEW ITEMEXTENT)*/
                       itemCount: 1000, //try longer
                       itemBuilder: (context, index) {
                         // interleaved videos
@@ -247,4 +247,4 @@ class _FeedVideoIntegrationSmoothState
   bool _checkCanBuildVideo() {
     return _canBuildVideo;
   }
-}
+}*/

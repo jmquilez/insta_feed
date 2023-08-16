@@ -10,32 +10,13 @@ import 'package:flutter/material.dart';
 //TOTAL 3 ERROR POSSIBILITIES: MEMORY CRASH, NO CONTROLLERS FREE IN LIST, NOT INITIALIZING
 //EXOPLAYER
 //TODO: internet connection loss results in controllers disappearing and not re-rendering
-class ReusableVideoListController {
+class ReusableVideoListControllerGlobal {
   final List<BpRegistryElem> _betterPlayerControllerRegistry = [];
   final List<BpRegistryElem> _usedBetterPlayerControllerRegistry = [];
-  bool? autoplayer;
+  bool? autoplay;
   final Logger _logger = Logger();
   //TODO: check removing const
-  final BetterPlayerConfiguration _config = const BetterPlayerConfiguration(
-    useRootNavigator: false, //true --> check out
-    autoPlay: false, //true
-    controlsConfiguration: BetterPlayerControlsConfiguration(
-        showControls: true /*true*/,
-        loadingWidget: Text("Hola"),
-        showControlsOnInitialize: true /*--> false??*/),
-    looping: false,
-    fullScreenByDefault: false, //true
-    aspectRatio: 16 / 9,
-    autoDetectFullscreenDeviceOrientation: true,
-    deviceOrientationsOnFullScreen: [DeviceOrientation.landscapeRight],
-    //deviceOrientationsOnFullScreen: [DeviceOrientation.portraitUp],
-    deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
-    //autoDetectFullscreenDeviceOrientation: true,
-    //NOTE: was this the fail?
-    autoDispose: false, //true
-    //TODO, NOTE: SET HANDLELIFECYCLE TO LIBRARY
-    handleLifecycle: false,
-  );
+  BetterPlayerConfiguration? _config;
 
   List<BpRegistryElem> get getUsedBpRegistry =>
       _usedBetterPlayerControllerRegistry;
@@ -51,11 +32,30 @@ class ReusableVideoListController {
     print("Player visibility changed");
   }
 
-  ReusableVideoListController() {
-    //TODO: 3 for android, 2 for ios?
+  ReusableVideoListControllerGlobal(bool this.autoplay) {
+    _config = BetterPlayerConfiguration(
+      useRootNavigator: false, //true --> check out
+      autoPlay: autoplay!, //true
+      controlsConfiguration: const BetterPlayerControlsConfiguration(
+          showControls: true /*TODO: check*/,
+          loadingWidget: Text("Hola"),
+          showControlsOnInitialize: true /*--> false??*/),
+      looping: false,
+      fullScreenByDefault: false, //true
+      aspectRatio: 16 / 9,
+      autoDetectFullscreenDeviceOrientation: true,
+      deviceOrientationsOnFullScreen: [DeviceOrientation.landscapeRight],
+      //deviceOrientationsOnFullScreen: [DeviceOrientation.portraitUp],
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
+      //autoDetectFullscreenDeviceOrientation: true,
+      //NOTE: was this the fail?
+      autoDispose: false, //true
+      //TODO, NOTE: SET HANDLELIFECYCLE TO LIBRARY
+      handleLifecycle: false,
+    );
     for (int index = 0; index < 3; index++) {
       _betterPlayerControllerRegistry.add(BpRegistryElem(
-          BetterPlayerController(_config), DateTime.now(), null));
+          BetterPlayerController(_config!), DateTime.now(), null));
     }
   }
 

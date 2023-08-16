@@ -1,0 +1,16 @@
+E/flutter (18690): [ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: Null check operator used on a null value
+E/flutter (18690): #0      _ReusableVideoListWidgetCleanState._setupController (package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean.dart:103)
+E/flutter (18690): <asynchronous suspension>
+E/flutter (18690): #1      _ReusableVideoListWidgetCleanState.build.<anonymous closure> (package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean.dart:201)
+E/flutter (18690): <asynchronous suspension>
+E/flutter (18690): 
+
+E/flutter (22132): [ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: Null check operator used on a null value
+E/flutter (22132): #0      _ReusableVideoListWidgetCleanState._setupController (package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean.dart:103)
+E/flutter (22132): <asynchronous suspension>
+E/flutter (22132): #1      _ReusableVideoListWidgetCleanState.build.<anonymous closure>.<anonymous closure> (package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean.dart:190)
+E/flutter (22132): <asynchronous suspension>
+E/flutter (22132): 
+I/flutter (22132): CURR_INDEX: 34, controller: null
+
+--> CAUSED KEEP PLAYING UNEXISTING VIDEO ERROR

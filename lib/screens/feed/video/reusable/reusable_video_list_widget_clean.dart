@@ -99,7 +99,7 @@ class _ReusableVideoListWidgetCleanState
         if (!betterPlayerControllerStreamController.isClosed) {
           betterPlayerControllerStreamController.add(controller);
         }
-        //TODO, NOTE: REPLACE "?" WITH "!"? --> null check operator used on a null value
+        //TODO, NOTE: REPLACE "?" WITH "!"? --> null check operator used on a null value, revise bug
         controller!.addEventsListener(onPlayerEvent);
       }
     }
@@ -119,7 +119,9 @@ class _ReusableVideoListWidgetCleanState
       controller!.removeEventsListener(onPlayerEvent);
       BpRegistryElem? elem = widget.videoListController!.getElem(controller!);
       widget.videoListController!.freeBetterPlayerController(elem);
+      //TODO, NOTE: it is causing line 103 to throw null check operator error
       controller = null;
+      //TODO: await a future that sets up controller, then set it to null?
       if (!betterPlayerControllerStreamController.isClosed) {
         betterPlayerControllerStreamController.add(null);
       }
@@ -127,6 +129,8 @@ class _ReusableVideoListWidgetCleanState
   }
 
   Future<void> onPlayerEvent(BetterPlayerEvent event) async {
+    print(
+        "event received: ${event.betterPlayerEventType}, index: ${widget.index}");
     if (event.betterPlayerEventType == BetterPlayerEventType.progress) {
       videoListData!.lastPosition = event.parameters!["progress"] as Duration?;
     }

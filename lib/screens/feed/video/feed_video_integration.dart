@@ -17,7 +17,7 @@ import 'package:intl/intl.dart';
 import 'package:keframe/keframe.dart';
 import 'package:logger/logger.dart';
 import 'package:rxdart/rxdart.dart';
-import 'package:smooth/smooth.dart';
+//import 'package:smooth/smooth.dart';
 
 //TODO: stop video rendering when scrolling is too fast
 

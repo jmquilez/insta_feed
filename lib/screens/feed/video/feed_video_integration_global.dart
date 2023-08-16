@@ -9,11 +9,12 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_no_autoplay_render.dart';
 import 'package:insta_feed/utils/colors.dart';
 import 'package:insta_feed/utils/video/model/video_list_data.dart';
 import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_controller.dart';
+import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_controller_non_autoplay.dart';
 import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean.dart';
-import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_no_video_image.dart';
 import 'package:intl/intl.dart';
 import 'package:keframe/keframe.dart';
 import 'package:logger/logger.dart';
@@ -30,16 +31,20 @@ import 'package:rxdart/rxdart.dart';
 
 //NOTE: hls lags, live hls lags too, no matter size of video
 
-class FeedVideoIntegrationNonImage extends StatefulWidget {
-  const FeedVideoIntegrationNonImage({Key? key}) : super(key: key);
+class FeedVideoIntegrationGlobal extends StatefulWidget {
+  final bool autoplay;
+  final bool render;
+  const FeedVideoIntegrationGlobal(
+      {Key? key, required this.autoplay, required this.render})
+      : super(key: key);
 
   @override
-  State<FeedVideoIntegrationNonImage> createState() =>
-      _FeedVideoIntegrationNonImageState();
+  State<FeedVideoIntegrationGlobal> createState() =>
+      _FeedVideoIntegrationGlobalState();
 }
 
-class _FeedVideoIntegrationNonImageState
-    extends State<FeedVideoIntegrationNonImage> {
+class _FeedVideoIntegrationGlobalState
+    extends State<FeedVideoIntegrationGlobal> {
   //TODO: create list with docs for cache extent
   StreamSubscription<ConnectivityResult>? subscription;
   final Connectivity _connectivity = Connectivity();
@@ -68,7 +73,7 @@ class _FeedVideoIntegrationNonImageState
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
   ];
   List<VideoListData> dataList = [];
-  ReusableVideoListController? videoListController;
+  ReusableVideoListControllerNonAutoplay? videoListController;
   bool _canBuildVideo = true;
   int lastMilli = DateTime.now().millisecondsSinceEpoch;
   List<bool> isVideo = [];
@@ -79,7 +84,7 @@ class _FeedVideoIntegrationNonImageState
     super.initState();
     initConnectivity();
     _setupData();
-    videoListController = ReusableVideoListController();
+    videoListController = ReusableVideoListControllerNonAutoplay();
     subscription =
         Connectivity().onConnectivityChanged.listen(_updateConnectionStatus);
     _scrollController.addListener(() {
@@ -190,7 +195,7 @@ class _FeedVideoIntegrationNonImageState
                 scrollDirection: Axis.vertical,
                 itemExtent: 550,
                 cacheExtent: 800, //500
-                //TODO: remove?? --> CHECK
+                //TODO: remove??
                 //itemCount: 161,
                 physics: //CustomPhysics(),
                     const BouncingScrollPhysics(), //const ClampingScrollPhysics(),
@@ -216,7 +221,7 @@ class _FeedVideoIntegrationNonImageState
                       color: index % 2 == 0 ? Colors.red : Colors.blue,
                       height: 600,
                     ),
-                    child: ReusableVideoListWidgetCleanNoVideoImage(
+                    child: ReusableVideoListWidgetCleanNoAutoplayRender(
                         videoListData: videoListData,
                         videoListController: videoListController,
                         canBuildVideo: _checkCanBuildVideo,
