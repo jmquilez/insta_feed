@@ -14,6 +14,7 @@ class ReusableVideoListControllerGlobal {
   final List<BpRegistryElem> _betterPlayerControllerRegistry = [];
   final List<BpRegistryElem> _usedBetterPlayerControllerRegistry = [];
   bool? autoplay;
+  bool? controls;
   final Logger _logger = Logger();
   //TODO: check removing const
   BetterPlayerConfiguration? _config;
@@ -32,12 +33,12 @@ class ReusableVideoListControllerGlobal {
     print("Player visibility changed");
   }
 
-  ReusableVideoListControllerGlobal(bool this.autoplay) {
+  ReusableVideoListControllerGlobal(bool this.autoplay, bool this.controls) {
     _config = BetterPlayerConfiguration(
       useRootNavigator: false, //true --> check out
       autoPlay: autoplay!, //true
-      controlsConfiguration: const BetterPlayerControlsConfiguration(
-          showControls: true /*TODO: check*/,
+      controlsConfiguration: BetterPlayerControlsConfiguration(
+          showControls: controls! /*TODO: check*/,
           loadingWidget: Text("Hola"),
           showControlsOnInitialize: true /*--> false??*/),
       looping: false,

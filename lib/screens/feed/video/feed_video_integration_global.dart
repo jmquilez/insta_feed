@@ -9,12 +9,10 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_no_autoplay_render.dart';
+import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_controller_global.dart';
 import 'package:insta_feed/utils/colors.dart';
 import 'package:insta_feed/utils/video/model/video_list_data.dart';
-import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_controller.dart';
-import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_controller_non_autoplay.dart';
-import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean.dart';
+import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_global.dart';
 import 'package:intl/intl.dart';
 import 'package:keframe/keframe.dart';
 import 'package:logger/logger.dart';
@@ -34,8 +32,12 @@ import 'package:rxdart/rxdart.dart';
 class FeedVideoIntegrationGlobal extends StatefulWidget {
   final bool autoplay;
   final bool render;
+  final bool controls;
   const FeedVideoIntegrationGlobal(
-      {Key? key, required this.autoplay, required this.render})
+      {Key? key,
+      required this.autoplay,
+      required this.render,
+      required this.controls})
       : super(key: key);
 
   @override
@@ -73,7 +75,7 @@ class _FeedVideoIntegrationGlobalState
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4"
   ];
   List<VideoListData> dataList = [];
-  ReusableVideoListControllerNonAutoplay? videoListController;
+  ReusableVideoListControllerGlobal? videoListController;
   bool _canBuildVideo = true;
   int lastMilli = DateTime.now().millisecondsSinceEpoch;
   List<bool> isVideo = [];
@@ -84,7 +86,8 @@ class _FeedVideoIntegrationGlobalState
     super.initState();
     initConnectivity();
     _setupData();
-    videoListController = ReusableVideoListControllerNonAutoplay();
+    videoListController =
+        ReusableVideoListControllerGlobal(widget.autoplay, widget.controls);
     subscription =
         Connectivity().onConnectivityChanged.listen(_updateConnectionStatus);
     _scrollController.addListener(() {
@@ -221,11 +224,12 @@ class _FeedVideoIntegrationGlobalState
                       color: index % 2 == 0 ? Colors.red : Colors.blue,
                       height: 600,
                     ),
-                    child: ReusableVideoListWidgetCleanNoAutoplayRender(
+                    child: ReusableVideoListWidgetCleanGlobal(
                         videoListData: videoListData,
                         videoListController: videoListController,
                         canBuildVideo: _checkCanBuildVideo,
-                        index: index),
+                        index: index,
+                        render: widget.render),
                   );
                 }),
           )),

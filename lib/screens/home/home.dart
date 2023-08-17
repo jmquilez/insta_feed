@@ -55,33 +55,33 @@ class _HomeState extends State<Home> {
             BottomNavigationBarItem(
               icon: Icon(Icons.line_axis,
                   color: _page == 0 ? primaryColor : secondaryColor),
-              label: 'Plain',
+              label: 'Complete',
               backgroundColor: primaryColor,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.waves,
                   color: _page == 1 ? primaryColor : secondaryColor),
-              label: 'Smooth',
+              label: 'Non-render',
               backgroundColor: primaryColor,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.airplane_ticket_outlined,
                   color: _page == 2 ? primaryColor : secondaryColor),
-              label: 'Non-image',
+              label: 'Non-autoplay',
               backgroundColor: primaryColor,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.train_outlined,
                   color: _page == 3 ? primaryColor : secondaryColor),
-              label: 'Non-autoplay',
+              label: 'Non-complete',
               backgroundColor: primaryColor,
             ),
-            BottomNavigationBarItem(
+            /*BottomNavigationBarItem(
               icon: Icon(Icons.sailing_rounded,
                   color: _page == 4 ? primaryColor : secondaryColor),
               label: 'Non-autoplay-rd',
               backgroundColor: primaryColor,
-            ),
+            ),*/
           ],
           onTap: navigationTapped,
         ),

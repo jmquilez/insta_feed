@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:insta_feed/screens/feed/video/feed_video_integration.dart';
-import 'package:insta_feed/screens/feed/video/feed_video_integration_non_autoplay.dart';
-import 'package:insta_feed/screens/feed/video/feed_video_integration_smooth.dart';
-import 'package:insta_feed/screens/feed/video/feed_video_integration_non-image.dart';
-import 'package:insta_feed/screens/feed/video/feed_video_integration_non_autoplay_render.dart';
+import 'package:insta_feed/screens/feed/video/feed_video_integration_global.dart';
 
 List<Widget> items = [
-  const FeedVideoIntegration(),
-  const FeedVideoIntegrationSmooth(),
-  const FeedVideoIntegrationNonImage(),
-  const FeedVideoIntegrationNonAutoplay(),
-  const FeedVideoIntegrationNonAutoplayRender(),
+  const FeedVideoIntegrationGlobal(
+      autoplay: true, render: true, controls: true),
+  const FeedVideoIntegrationGlobal(
+      autoplay: true, render: false, controls: true),
+  const FeedVideoIntegrationGlobal(
+      autoplay: false, render: true, controls: true),
+  const FeedVideoIntegrationGlobal(
+      autoplay: false, render: false, controls: true),
 ];
