@@ -34,6 +34,7 @@ class ReusableVideoListControllerGlobal {
   }
 
   ReusableVideoListControllerGlobal(bool this.autoplay, bool this.controls) {
+    //mix with others?
     _config = BetterPlayerConfiguration(
       useRootNavigator: false, //true --> check out
       autoPlay: autoplay!, //true

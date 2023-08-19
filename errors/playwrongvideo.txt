@@ -1,0 +1,225 @@
+focused on index 4, search for FREEING-AFTER-INITIALIZING, error when jumping to page?? (setState), check line 176:    
+    I/flutter (14168): FREEING-CONTROLLER, index: 3
+    I/flutter (14168): setting controller up, index: 4
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] signalFlush
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] ExecutingState flushing now (codec owns 5/5 input, 0/15 output).
+    D/FLUTTER_PLAYER_TOTAL(14168): 4003
+    D/FLUTTER_PLAYER_STMDDSRC(14168): 2372
+    D/FLUTTER_PLAYER_TOTPREP(14168): 8
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] Now Flushing
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.bufferingUpdate
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.bufferingStart
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] FlushingState onOMXEvent(0,1,0)
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] FlushingState onOMXEvent(0,1,1)
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] Now Executing
+    D/MediaCodec(14168): keep callback message for reclaim
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(FLUSHING)
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(FLUSHED)
+    D/MediaCodec(14168): keep callback message for reclaim
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(RESUMING)
+    I/CCodecConfig(14168): query failed after returning 20 values (BAD_INDEX)
+    W/Codec2Client(14168): query -- param skipped: index = 1342179345.
+    W/Codec2Client(14168): query -- param skipped: index = 2415921170.
+    W/Codec2Client(14168): query -- param skipped: index = 1610614798.
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(RUNNING)
+    D/BufferPoolAccessor2.0(14168): bufferpool2 0x7290230028 : 1(8192 size) total buffers - 1(8192 size) used buffers - 101/107 (recycle/alloc) - 5/106 (fetch/transfer)
+    I/CCodecBufferChannel(14168): [c2.android.aac.decoder#438] 4 initial input buffers available
+    D/TrafficStats(14168): tagSocket(158) with statsTag=0xffffffff, statsUid=-1
+    I/flutter (14168): FREEING-CONTROLLER, index: 3
+    I/flutter (14168): FREEING-CONTROLLER, index: 5
+    I/flutter (14168): CURRENT_LIST_INDEX: 6
+    I/flutter (14168): CURR_INDEX: 6, controller: null
+    I/flutter (14168): FREEING-CONTROLLER, index: 4
+    I/flutter (14168): FREEING-ACTUAL-CONTROLLER, index: 4
+    I/flutter (14168): IS-INITIALIZING-FALSE, index: 4
+    I/flutter (14168): INIT-CONTROLLER: Instance of 'BetterPlayerController', index: 4
+    I/flutter (14168): setting controller up, index: 5
+    I/ExoPlayerImpl(14168): Init f35f4dc [ExoPlayerLib/2.18.7] [a51x, SM-A516B, samsung, 33]
+    D/FLUTTER_PLAYER_TOTAL(14168): 3238
+    D/FLUTTER_PLAYER_STMDDSRC(14168): 1343
+    D/FLUTTER_PLAYER_TOTPREP(14168): 890
+    D/TrafficStats(14168): tagSocket(185) with statsTag=0xffffffff, statsUid=-1
+    D/MetadataUtil(14168): Skipped unknown metadata entry: gsst
+    D/MetadataUtil(14168): Skipped unknown metadata entry: gstd
+    D/MetadataUtil(14168): Skipped unknown metadata entry: gssd
+    D/MetadataUtil(14168): Skipped unknown metadata entry: gspu
+    D/MetadataUtil(14168): Skipped unknown metadata entry: gspm
+    D/MetadataUtil(14168): Skipped unknown metadata entry: gshh
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] signalFlush
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] ExecutingState flushing now (codec owns 0/5 input, 10/15 output).
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] Now Flushing
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] FlushingState onOMXEvent(0,1,0)
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] FlushingState onOMXEvent(0,1,1)
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] Now Executing
+    D/MediaCodec(14168): keep callback message for reclaim
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(FLUSHING)
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(FLUSHED)
+    D/MediaCodec(14168): keep callback message for reclaim
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(RESUMING)
+    I/CCodecConfig(14168): query failed after returning 20 values (BAD_INDEX)
+    W/Codec2Client(14168): query -- param skipped: index = 1342179345.
+    W/Codec2Client(14168): query -- param skipped: index = 2415921170.
+    W/Codec2Client(14168): query -- param skipped: index = 1610614798.
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(RUNNING)
+    I/CCodecBufferChannel(14168): [c2.android.aac.decoder#438] 4 initial input buffers available
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(RELEASING)
+    D/CCodecBufferChannel(14168): [c2.android.aac.decoder#438] MediaCodec discarded an unknown buffer
+    D/CCodecBufferChannel(14168): [c2.android.aac.decoder#438] MediaCodec discarded an unknown buffer
+    D/CCodecBufferChannel(14168): [c2.android.aac.decoder#438] MediaCodec discarded an unknown buffer
+    D/CCodecBufferChannel(14168): [c2.android.aac.decoder#438] MediaCodec discarded an unknown buffer
+    I/CCodec  (14168): [c2.android.aac.decoder] release(1)
+    I/DMCodecAdapterFactory(14168): Creating an asynchronous MediaCodec adapter for track type audio
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(RELEASED)
+    I/CCodec  (14168): state->set(ALLOCATING)
+    I/hw-BpHwBinder(14168): onLastStrongRef automatically unlinking death recipients
+    I/CCodec  (14168): allocate(c2.android.aac.decoder)
+    I/MediaCodec(14168): Codec shutdown complete
+    D/MediaCodec(14168): flushMediametrics
+    D/MediaCodec(14168): flushMediametrics
+    I/CCodec  (14168): setting up 'default' as default (vendor) store
+    I/CCodec  (14168): Created component [c2.android.aac.decoder]
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(ALLOCATED)
+    D/CCodecConfig(14168): read media type: audio/mp4a-latm
+    D/ReflectedParamUpdater(14168): extent() != 1 for single value type: algo.buffers.max-count.values
+    D/ReflectedParamUpdater(14168): extent() != 1 for single value type: output.subscribed-indices.values
+    D/ReflectedParamUpdater(14168): extent() != 1 for single value type: input.buffers.allocator-ids.values
+    D/ReflectedParamUpdater(14168): extent() != 1 for single value type: output.buffers.allocator-ids.values
+    D/ReflectedParamUpdater(14168): extent() != 1 for single value type: algo.buffers.allocator-ids.values
+    D/ReflectedParamUpdater(14168): extent() != 1 for single value type: output.buffers.pool-ids.values
+    D/ReflectedParamUpdater(14168): extent() != 1 for single value type: algo.buffers.pool-ids.values
+    I/CCodecConfig(14168): query failed after returning 20 values (BAD_INDEX)
+    D/CCodecConfig(14168): c2 config diff is Dict {
+    D/CCodecConfig(14168):   c2::u32 coded.aac-packaging.value = 0
+    D/CCodecConfig(14168):   c2::u32 coded.bitrate.value = 64000
+    D/CCodecConfig(14168):   c2::u32 coded.pl.level = 0
+    D/CCodecConfig(14168):   c2::u32 coded.pl.profile = 8192
+    D/CCodecConfig(14168):   c2::i32 coding.drc.album-mode.value = 0
+    D/CCodecConfig(14168):   c2::float coding.drc.attenuation-factor.value = 1
+    D/CCodecConfig(14168):   c2::float coding.drc.boost-factor.value = 1
+    D/CCodecConfig(14168):   c2::i32 coding.drc.compression-mode.value = 3
+    D/CCodecConfig(14168):   c2::i32 coding.drc.effect-type.value = 3
+    D/CCodecConfig(14168):   c2::float coding.drc.encoded-level.value = 0.25
+    D/CCodecConfig(14168):   c2::float coding.drc.reference-level.value = -16
+    D/CCodecConfig(14168):   c2::u32 input.buffers.max-size.value = 8192
+    D/CCodecConfig(14168):   c2::u32 input.delay.value = 0
+    D/CCodecConfig(14168):   string input.media-type.value = "audio/mp4a-latm"
+    D/CCodecConfig(14168):   c2::u32 output.delay.value = 2
+    D/CCodecConfig(14168):   c2::float output.drc.output-loudness.value = 0.25
+    D/CCodecConfig(14168):   string output.media-type.value = "audio/raw"
+    D/CCodecConfig(14168):   c2::u32 raw.channel-count.value = 1
+    D/CCodecConfig(14168):   c2::u32 raw.channel-mask.value = 0
+    D/CCodecConfig(14168):   c2::u32 raw.max-channel-count.value = 8
+    D/CCodecConfig(14168):   c2::u32 raw.sample-rate.value = 44100
+    D/CCodecConfig(14168): }
+    I/MediaCodec(14168): MediaCodec will operate in async mode
+    D/MediaCodec(14168): flushMediametrics
+    D/CCodec  (14168): [c2.android.aac.decoder] buffers are bound to CCodec for this session
+    I/CCodec  (14168): appPid(14168) width(0) height(0)
+    D/CCodecConfig(14168): no c2 equivalents for log-session-id
+    D/CCodecConfig(14168): no c2 equivalents for flags
+    D/CCodecConfig(14168): config failed => CORRUPTED
+    D/CCodecConfig(14168): c2 config diff is   c2::u32 raw.channel-count.value = 2
+    W/Codec2Client(14168): query -- param skipped: index = 1107298332.
+    D/CCodec  (14168): client requested max input size 796, which is smaller than what component recommended (8192); overriding with component recommendation.
+    W/CCodec  (14168): This behavior is subject to change. It is recommended that app developers double check whether the requested max input size is in reasonable range.
+    D/CCodec  (14168): encoding statistics level = 0
+    D/CCodec  (14168): setup formats input: AMessage(what = 0x00000000) = {
+    D/CCodec  (14168):   int32_t aac-drc-album-mode = 0
+    D/CCodec  (14168):   int32_t aac-drc-boost-level = 127
+    D/CCodec  (14168):   int32_t aac-drc-cut-level = 127
+    D/CCodec  (14168):   int32_t aac-drc-effect-type = 3
+    D/CCodec  (14168):   int32_t aac-encoded-target-level = -1
+    D/CCodec  (14168):   int32_t aac-max-output-channel_count = 8
+    D/CCodec  (14168):   int32_t aac-target-ref-level = 64
+    D/CCodec  (14168):   int32_t bitrate = 64000
+    D/CCodec  (14168):   int32_t channel-count = 2
+    D/CCodec  (14168):   int32_t channel-mask = 0
+    D/CCodec  (14168):   int32_t level = 0
+    D/CCodec  (14168):   int32_t max-input-size = 8192
+    D/CCodec  (14168):   int32_t max-output-channel-count = 8
+    D/CCodec  (14168):   string mime = "audio/mp4a-latm"
+    D/CCodec  (14168):   int32_t profile = 2
+    D/CCodec  (14168):   int32_t sample-rate = 44100
+    D/CCodec  (14168):   int64_t durationUs = 0
+    D/CCodec  (14168): }
+    D/CCodec  (14168): setup formats output: AMessage(what = 0x00000000) = {
+    D/CCodec  (14168):   int32_t aac-drc-album-mode = 0
+    D/CCodec  (14168):   int32_t aac-drc-boost-level = 127
+    D/CCodec  (14168):   int32_t aac-drc-cut-level = 127
+    D/CCodec  (14168):   int32_t aac-drc-effect-type = 3
+    D/CCodec  (14168):   int32_t aac-drc-output-loudness = -1
+    D/CCodec  (14168):   int32_t aac-encoded-target-level = -1
+    D/CCodec  (14168):   int32_t aac-max-output-channel_count = 8
+    D/CCodec  (14168):   int32_t aac-target-ref-level = 64
+    D/CCodec  (14168):   int32_t channel-count = 2
+    D/CCodec  (14168):   int32_t channel-mask = 0
+    D/CCodec  (14168):   int32_t max-output-channel-count = 8
+    D/CCodec  (14168):   string mime = "audio/raw"
+    D/CCodec  (14168):   int32_t sample-rate = 44100
+    D/CCodec  (14168):   int32_t android._config-pcm-encoding = 2
+    D/CCodec  (14168): }
+    I/CCodecConfig(14168): query failed after returning 20 values (BAD_INDEX)
+    D/MediaCodec(14168): keep callback message for reclaim
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(STARTING)
+    W/Codec2Client(14168): query -- param skipped: index = 1342179345.
+    W/Codec2Client(14168): query -- param skipped: index = 2415921170.
+    W/Codec2Client(14168): query -- param skipped: index = 1610614798.
+    D/CCodecBufferChannel(14168): [c2.android.aac.decoder#168] Created input block pool with allocatorID 16 => poolID 19 - OK (0)
+    D/BufferPoolAccessor2.0(14168): bufferpool2 0x7258bc1c28 : 0(0 size) total buffers - 0(0 size) used buffers - 175/186 (recycle/alloc) - 14/170 (fetch/transfer)
+    D/BufferPoolAccessor2.0(14168): Destruction - bufferpool2 0x7258bc1c28 cached: 0/0M, 0/0% in use; allocs: 186, 94% recycled; transfers: 170, 92% unfetched
+    I/CCodecBufferChannel(14168): [c2.android.aac.decoder#168] Created output block pool with allocatorID 16 => poolID 471 - OK
+    D/CCodecBufferChannel(14168): [c2.android.aac.decoder#168] Configured output block pool ids 471 => OK
+    I/CCodec  (14168): [c2.android.aac.decoder] state->set(RUNNING)
+    I/CCodecBufferChannel(14168): [c2.android.aac.decoder#168] 4 initial input buffers available
+    I/flutter (14168): FREEING-CONTROLLER, index: 4
+    I/flutter (14168): FREEING-ACTUAL-CONTROLLER, index: 4
+    I/flutter (14168): CURR_INDEX: 4, controller: null
+    I/flutter (14168): FREEING-CONTROLLER, index: 4
+    I/flutter (14168): FREEING-CONTROLLER, index: 4
+    W/ACodec  (14168): [OMX.Exynos.avc.dec] getting HDRStaticInfo failed even though codec advertises support
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] Now handling output port settings change
+    D/SurfaceUtils(14168): set up nativeWindow 0x7258a8f010 for 1280x720, color 0x105, rotation 0, usage 0x402900
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] configureOutputBuffersFromNativeWindow setBufferCount : 13, minUndequeuedBuffers : 5
+    I/ACodec  (14168): [OMX.Exynos.avc.dec] Now Executing
+    I/MediaCodec(14168): setCodecState state(1), called in 6
+    I/MediaCodec(14168): setCodecState state(0), called in 6
+    D/BufferPoolAccessor2.0(14168): bufferpool2 0x7290230028 : 0(0 size) total buffers - 0(0 size) used buffers - 106/116 (recycle/alloc) - 5/106 (fetch/transfer)
+    D/BufferPoolAccessor2.0(14168): evictor expired: 1, evicted: 1
+    D/BufferPoolAccessor2.0(14168): bufferpool2 0x72f4838a28 : 5(40960 size) total buffers - 4(32768 size) used buffers - 1/6 (recycle/alloc) - 1/2 (fetch/transfer)
+    D/BufferPoolAccessor2.0(14168): evictor expired: 2, evicted: 1
+    I/ViewRootImpl@f6bbab0[MainActivity](14168): ViewPostIme pointer 0
+    D/BufferPoolAccessor2.0(14168): Destruction - bufferpool2 0x7290230028 cached: 0/0M, 0/0% in use; allocs: 116, 91% recycled; transfers: 106, 95% unfetched
+    I/ViewRootImpl@f6bbab0[MainActivity](14168): ViewPostIme pointer 1
+    D/CCodecConfig(14168): c2 config diff is   c2::u32 raw.channel-mask.value = 12
+    D/CCodecBuffers(14168): [c2.android.aac.decoder#168:Output[N]] popFromStashAndRegister: at 1000000000000us, output format changed to AMessage(what = 0x00000000) = {
+    D/CCodecBuffers(14168):   int32_t aac-drc-album-mode = 0
+    D/CCodecBuffers(14168):   int32_t aac-drc-boost-level = 127
+    D/CCodecBuffers(14168):   int32_t aac-drc-cut-level = 127
+    D/CCodecBuffers(14168):   int32_t aac-drc-effect-type = 3
+    D/CCodecBuffers(14168):   int32_t aac-drc-output-loudness = -1
+    D/CCodecBuffers(14168):   int32_t aac-encoded-target-level = -1
+    D/CCodecBuffers(14168):   int32_t aac-max-output-channel_count = 8
+    D/CCodecBuffers(14168):   int32_t aac-target-ref-level = 64
+    D/CCodecBuffers(14168):   int32_t channel-count = 2
+    D/CCodecBuffers(14168):   int32_t channel-mask = 12
+    D/CCodecBuffers(14168):   int32_t max-output-channel-count = 8
+    D/CCodecBuffers(14168):   string mime = "audio/raw"
+    D/CCodecBuffers(14168):   int32_t sample-rate = 44100
+    D/CCodecBuffers(14168):   int32_t android._config-pcm-encoding = 2
+    D/CCodecBuffers(14168): }
+    D/AudioTrack(14168): setVolume(1.000000, 1.000000) pid : 14168
+    I/flutter (14168): FREEING-CONTROLLER, index: 4
+    I/flutter (14168): RECEIVED_INITIALIZED_DEEPER
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.initialized
+    I/flutter (14168): Initialized_Indeed
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.bufferingEnd
+    I/flutter (14168): FREEING-AFTER-INITIALIZING detected, index: 4
+    I/flutter (14168): CONTROLLER-WAS-NULLED, index: 4
+    I/MediaCodec(14168): setCodecState state(1), called in 6
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.bufferingUpdate
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.bufferingUpdate
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.bufferingUpdate
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.bufferingStart
+    I/flutter (14168): _handleVideoEvent type: VideoEventType.bufferingUpdate
+    D/TrafficStats(14168): tagSocket(160) with statsTag=0xffffffff, statsUid=-1
+    D/BufferPoolAccessor2.0(14168): evictor expired: 1, evicted: 0

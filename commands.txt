@@ -1,2 +1,3 @@
 flutter run -dR5CNA04LX6K --profile --local-engine android_profile_arm64 --endless-trace-buffer
 fluttersmooth run -dR5CNA04LX6K --profile --local-engine android_profile_arm64 --endless-trace-buffer
+flutter pub upgrade fwfh_text_style

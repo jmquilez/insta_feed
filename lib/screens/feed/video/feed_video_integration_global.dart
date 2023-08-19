@@ -14,7 +14,7 @@ import 'package:insta_feed/utils/colors.dart';
 import 'package:insta_feed/utils/video/model/video_list_data.dart';
 import 'package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_global.dart';
 import 'package:intl/intl.dart';
-import 'package:keframe/keframe.dart';
+//import 'package:keframe/keframe.dart';
 import 'package:logger/logger.dart';
 import 'package:rxdart/rxdart.dart';
 //import 'package:smooth/smooth.dart';
@@ -64,9 +64,11 @@ class _FeedVideoIntegrationGlobalState
     ////'https://techslides.com/demos/sample-videos/small.mp4'
     'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+    //Maybe TearsOfSteal janks too?
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+    //NOTE: ForBiggerFun.mp4 tends to jank a little bit more than others at the beginning?
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
     "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
@@ -100,8 +102,9 @@ class _FeedVideoIntegrationGlobalState
   void _setupData() {
     // index < itemCount
     for (int index = 0; index < 1000; index++) {
-      var randomVideoUrl = _videos[_random.nextInt(_videos.length)];
-      dataList.add(VideoListData("Video $index", randomVideoUrl));
+      //var randomVideoUrl = _videos[_random.nextInt(_videos.length)];
+      var fixedVideoUrl = _videos[index % _videos.length];
+      dataList.add(VideoListData("Video $index", fixedVideoUrl));
       isVideo.add(true /*false*/ /*_random.nextBool()*/);
     }
   }
@@ -159,80 +162,47 @@ class _FeedVideoIntegrationGlobalState
         centerTitle: true,
       ),
       body: NotificationListener<ScrollNotification>(
-          onNotification: (notification) {
-            final now = DateTime.now();
-            final timeDiff = now.millisecondsSinceEpoch - lastMilli;
-            if (notification is ScrollUpdateNotification) {
-              final pixelsPerMilli = notification.scrollDelta! / timeDiff;
-              if (pixelsPerMilli.abs() > /*0.5*/ /*0.25*/ /*4*/ /*5*/
-                  1) {
-                _canBuildVideo = false;
-              } else {
-                _canBuildVideo = true;
-              }
-              lastMilli = DateTime.now().millisecondsSinceEpoch;
-            }
-
-            if (notification is ScrollEndNotification) {
+        onNotification: (notification) {
+          final now = DateTime.now();
+          final timeDiff = now.millisecondsSinceEpoch - lastMilli;
+          if (notification is ScrollUpdateNotification) {
+            final pixelsPerMilli = notification.scrollDelta! / timeDiff;
+            if (pixelsPerMilli.abs() > /*0.5*/ /*0.25*/ /*4*/ /*5*/
+                1) {
+              _canBuildVideo = false;
+            } else {
               _canBuildVideo = true;
-              lastMilli = DateTime.now().millisecondsSinceEpoch;
             }
+            lastMilli = DateTime.now().millisecondsSinceEpoch;
+          }
 
-            return true;
-          },
-          child: SizeCacheWidget(
-            //TODO: ADD ESTIMATEDCOUNT??
-            //estimateCount: 161,
-            /*child: SmoothParent(*/
-            child: ListView.builder(
-                //FOR MEMORY OPTIMIZATION --> set to false
-                addAutomaticKeepAlives: true, //false
-                shrinkWrap: false, //true
-                addRepaintBoundaries: true, //true
-                addSemanticIndexes: true, //false
-                //TODO: CHECK
-                primary: true, //false
-                //primary: false, //TODO: ????????
-                //TODO: calculate optimal cacheExtent, limit loadable pictures
-                //double.maxFinite??
-                scrollDirection: Axis.vertical,
-                itemExtent: 550,
-                cacheExtent: 800, //500
-                //TODO: remove??
-                //itemCount: 161,
-                physics: //CustomPhysics(),
-                    const BouncingScrollPhysics(), //const ClampingScrollPhysics(),
-                //TODO, NOTE: does it improve performance?
-                /*placeholder: PreferredSize(
-                        preferredSize: const Size(double.infinity, 600),
-                        child: Container(height: 600),
-                      ),*/
-                itemBuilder: (context, index) {
-                  // interleaved videos
-                  VideoListData videoListData = dataList[index];
-                  videoListData.index = index;
-                  //int video = Random().nextInt(10);
-                  //print("VIDEO_KEY: $video");
-                  print("CURRENT_LIST_INDEX: $index");
-                  //TODO: CHECK USE
-                  /*StreamController<BetterPlayerController?>
-                      betterPlayerControllerStreamController =
-                      StreamController.broadcast();*/
-                  return FrameSeparateWidget(
-                    index: index,
-                    placeHolder: Container(
-                      color: index % 2 == 0 ? Colors.red : Colors.blue,
-                      height: 600,
-                    ),
-                    child: ReusableVideoListWidgetCleanGlobal(
-                        videoListData: videoListData,
-                        videoListController: videoListController,
-                        canBuildVideo: _checkCanBuildVideo,
-                        index: index,
-                        render: widget.render),
-                  );
-                }),
-          )),
+          if (notification is ScrollEndNotification) {
+            _canBuildVideo = true;
+            lastMilli = DateTime.now().millisecondsSinceEpoch;
+          }
+
+          return true;
+        },
+        child: ListView.builder(
+            itemExtent: 550,
+            physics: //CustomPhysics(),
+                const BouncingScrollPhysics(), //need to be this physics, as with default ClampingScrollPhysics animation stops too early
+            //and thus video doesn't get to be loaded while the scrolling animation is playing,
+            //TODO, NOTE: does it improve performance?
+
+            itemBuilder: (context, index) {
+              // interleaved videos
+              VideoListData videoListData = dataList[index];
+              videoListData.index = index;
+              print("CURRENT_LIST_INDEX: $index");
+              return ReusableVideoListWidgetCleanGlobal(
+                  videoListData: videoListData,
+                  videoListController: videoListController,
+                  canBuildVideo: _checkCanBuildVideo,
+                  index: index,
+                  render: widget.render);
+            }),
+      ),
     );
   }
 

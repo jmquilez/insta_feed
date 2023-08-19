@@ -13,4 +13,29 @@ E/flutter (22132): <asynchronous suspension>
 E/flutter (22132): 
 I/flutter (22132): CURR_INDEX: 34, controller: null
 
---> CAUSED KEEP PLAYING UNEXISTING VIDEO ERROR
+--> CAUSED KEEP PLAYING UNEXISTING VIDEO ERROR, ISSUE WORSENS WHEN INTERNET CONNECTION IS BAD
+
+I/flutter (18307): RECEIVED_INITIALIZED_DEEPER
+I/flutter (18307): _handleVideoEvent type: VideoEventType.bufferingEnd
+E/flutter (18307): [ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: Null check operator used on a null value
+E/flutter (18307): #0      _ReusableVideoListWidgetCleanGlobalState._setupController (package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_global.dart:105)
+E/flutter (18307): <asynchronous suspension>
+E/flutter (18307): #1      _ReusableVideoListWidgetCleanGlobalState.build.<anonymous closure> (package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_global.dart:207)
+E/flutter (18307): <asynchronous suspension>
+E/flutter (18307): 
+I/flutter (18307): CURR_INDEX: 1, controller: null
+I/flutter (18307): _handleVideoEvent type: VideoEventType.bufferingUpdate
+I/flutter (18307): _handleVideoEvent type: VideoEventType.bufferingUpdate
+
+I/flutter (16246): RECEIVED_INITIALIZED_DEEPER
+I/flutter (16246): _handleVideoEvent type: VideoEventType.initialized
+I/flutter (16246): Initialized_Indeed
+I/flutter (16246): _handleVideoEvent type: VideoEventType.bufferingEnd
+E/flutter (16246): [ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: Null check operator used on a null value
+E/flutter (16246): #0      _ReusableVideoListWidgetCleanGlobalState._setupController (package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_global.dart:105)
+E/flutter (16246): <asynchronous suspension>
+E/flutter (16246): #1      _ReusableVideoListWidgetCleanGlobalState.build.<anonymous closure> (package:insta_feed/screens/feed/video/reusable/reusable_video_list_widget_clean_global.dart:210)
+E/flutter (16246): <asynchronous suspension>
+E/flutter (16246): 
+D/AudioTrack(16246): getTimestamp_l(435): device stall time corrected using current time 8261702246629
+I/flutter (16246): _handleVideoEvent type: VideoEventType.bufferingUpdate
