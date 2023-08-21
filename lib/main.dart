@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    //TODO, CHECK: INTERLEAVED FRAMES? (30 FPS VIDEO, CHANGE), SEVERAL CONSECUTIVE JANKY FRAMES, MEMORY USAGE??
     //TODO: SmoothParent??
     return /*SmoothParent(
       child: */
