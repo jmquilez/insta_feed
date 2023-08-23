@@ -1,3 +1,19 @@
 flutter run -dR5CNA04LX6K --profile --local-engine android_profile_arm64 --endless-trace-buffer
 fluttersmooth run -dR5CNA04LX6K --profile --local-engine android_profile_arm64 --endless-trace-buffer
 flutter pub upgrade fwfh_text_style
+
+TODO: check for frame info, GPURasterizer::Draw??
+CHECK CACHE USE??
+Memory has to do with frame performance?
+Interleaved jank?? Pipelining, finding overlap??
+Check if elapsed >>>> build + raster + vsyncoverhead, weird events??
+Does start time have anything to do with it?
+Overlap, VSYNC GUIDE????
+is startTime in microseconds from app start??
+Animator.Render, args.frame_number --> check in timeline events.
+Raster / GPURasterizer::Draw delays: these are the extra microseconds? (They are in microseconds order)
+Animator::BeginFrame, Animator::Render
+Higher jank delay, worse jump??
+Count watching graphic tops??
+Test with non-complete, check vsyncoverhead
+when jank is too high, is it vsyncoverhead? --> check if smooth_flutter solves it

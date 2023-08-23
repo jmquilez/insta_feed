@@ -1,0 +1,2 @@
+UNTIL 30-VI-2023 13:11, all scrolling trials have been done with phone resting on table
+shader compilation jank (only) when RE-OPENING APP??

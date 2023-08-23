@@ -3,6 +3,14 @@ import 'package:insta_feed/screens/home/home.dart';
 import 'package:insta_feed/utils/colors.dart';
 //import 'package:smooth/smooth.dart';
 
+//PROBLEM IS VSYNC OVERHEAD?? --> ALWAYS FIRST FRAME??, also raster related, see 13272.json, CHECK IF BUILD-RELATED AS WELL, or that "extra time" that we don't know about, --> IT IS is it delays??
+//Videos render at 30fps? (missing frames in gaps??)
+//ELAPSED --> "took x ms to render"
+//STUDY UI BUILD == RASTER TIME (MORELESS??)
+//HOW TO SEE VSYNC GUIDE??
+//CHECK VSYNCOVERHEAD EXCESS IN TIMELINE EVENTS
+//TODO: are OS's interruptions registered by devtools??
+
 void main() {
   //SmoothWidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());

@@ -1,0 +1,29 @@
+two or more consecutive janks: mesa (see line 5) (even one bar might be a mesa, but it tends to be just one janky frame)
+two consecutive janks: count as one
+mesas 1-5000 5001-10000, why their apparition??
+bars just adjacent to left edge are shader compilation jank (no count)
+in mesas, each bar does not correspond to a single janked frame, but to several --> isolated too? Probably not --> NOT IN "carta-29-7-watchingNotCheckSmootherSecondHalf.gif"
+mesa with 4 consecutive bars in ".gif" graph ("carta-29-7-watchingNotCheckSmootherSecondHalf.gif") had actually the following bar sequence ("J" = jank, delay > 17000 μs "N" = no jank, delay <=? 17000 μs), starting in frame 9060 and ending in frame 9128 --> mesa patterns?:
+
+J-N-J-N-N-J-N-N-J-N-J-N-N-J-N-J-N-J-N-J-J-N-N-N-J-J-N-N-J-N-J-N-J-N-J-N-N-N-J-N-J-N-J-N-J-N-J-J-N-N-J-N-N-N-J-J-N-J-J-N-J-N-N-J-N-J-N-J --> 31 janked frames total (radio approx --> 1 bar per each 8 janked frames (without counting non janked))
+J-9060-N-9061-J-9062-N-9063-N-9065-J-9066-N-9067-N-9068-J-9069-N-9070-J-9071-N-9072-N-9073-J-9074-N-9075-J-9076-N-9077-J-9078-N-9079-J-9080-J-9081-N-9082-N-9083-N-9084-J-9085-J-9086-N-9087-N-9088-J-9089-N-9090-J-9091-N-9092-J-9093-N-9094-J-9095-N-9096-N-9097-N-9098-J-9099-N-9100-J-9101-N-9102-J-9103-N-9104-J-9105-N-9106-J-9107-J-9108-N-9109-N-9110-J-9111-N-9112-N-9113-N-9114-J-9115-J-9116-N-9117-J-9118-J-9119-N-9120-J-9121-N-9122-N-9123-J-9124-N-9125-J-9126-N-9127-J-9128
+--> some frame indexes (ex.: 9064) didn't even appear
+--> in previous same file, bar at index 6000 (graph) actually matched frame 6004
+
+observations: almost no mesas with no preparing and no rendering
+study mesa's actual impact --> actual visual jank appearance (as the one above)
+KEY: Y-RANGE SMALLER THAN SOME BARS, THAT ELIDES THEM
+(bar per isolated janky frame --> yes, if y axis range is fine)
+mesa and then 1 bar or more with 1 gap: that bar is part of the mesa too, separation coincidence --> or maybe it is separated, but not even jank (jank starts at 17 ms)
+notifications cause +50ms delay spikes??
+
+NOTE: EDGES GET ELLIDED SOMETIMES (TOO SMALL, NO SPACE TO SHOW BARS)
+VOLUME MATTERS??
+CHECK OTHER PLAYERS --> TEXTURE FOR ANDROID, UIKITVIEW FOR IOS????
+extreme peaks????
+Try several videos at the same time
+Try leaving whatsapp messages unanswered
+Try with hard stops / back / arrow / with ads / skipping ads / left side zoom / autoskip / types of scrollers
+CHECK UI JANK TOO
+CHECK CAUSE OF DROPPED / MISSING FRAMES
+CONSECUTIVE FRAMES IN MESA WITH EXACTLY SAME DELAY??

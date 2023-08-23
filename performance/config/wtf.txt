@@ -1,0 +1,1 @@
+copied json relative path to performance/ dir and vscode opened and modified it, had to revert changes¿? --> ctrl / cmd + click on the path

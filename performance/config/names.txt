@@ -1,0 +1,68 @@
+data/snapshot-28-6-2023.json
+data/snapshot-1-29-6-2023.json
+data/snapshot-2-29-6-2023.json
+data/dart_devtools_2023-06-29_15_36_21.985.json
+data/dart_devtools_2023-06-29_15_51_36.499.json
+data/dart_devtools_2023-06-29_16_01_08.219.json
+data/dart_devtools_2023-06-29_16_09_49.530.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_16_32_58.102.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_19_16_57.214.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_19_21_46.498.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_19_26_15.537.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_19_32_32.158.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_19_47_48.657.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_20_06_31.645.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_20_15_27.385.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_20_22_40.393.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_22_33_07.136.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_22_42_31.613.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_22_50_09.542.json
+data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_23_00_20.790.json
+
+data/0.9-preparing-rendering/watchVid-not-checked-a-single-time-second-part-slower-scrolling-first-part-faster.json
+--> data/0.9-preparing-rendering/watchVid-unchecked-no-time-ALL-SMOOTH-SCROLLING.json
+data/0.9-preparing-rendering/watchVid-not-checked-fastScrollingAll-85%mob-61%comp.json
+data/0.9-preparing-rendering/watchVid-unchecked-hardAllExceptTwoScrolls-82%mob-44%comp.json
+data/0.9-preparing-rendering/watchVid-unchecked-allUltraSmooth-83%mob-36%comp.json
+
+data/0.9-preparing-rendering-circularProgress/watching-unchecked-allUltraSmooth-85%mob-30%comp.json
+
+data/0.9-noScrolling-preparing-rendering-circularProgress/dart_devtools_2023-06-30_15_51_37.722.json
+
+data/0.9-preparing-rendering-controls/watchVid-unchecked-ultraSmoothAll.json
+
+data/0.9-preparing-rendering-autoplay-noControls/allUltraSmooth-1.json
+
+res/0.9-not_preparing-not_rendering/carta-29-12.txt
+
+res/0.9-preparing-rendering/carta-29-7-watchingNotCheckSmootherSecondHalf.txt
+--> res/0.9-preparing-rendering/carta-29-8-watchingNotCheckSmoothAll.txt
+res/0.9-preparing-rendering/carta-30-9-watchingNotCheckHardAll.txt
+res/0.9-preparing-rendering/carta-30-10-hardAllExceptTwoScroll.txt
+res/0.9-preparing-rendering/carta-30-11-allUltraSmooth.txt
+
+res/0.9-preparing-rendering-circularProgress/carta-30-1-allUltraSmooth.txt
+
+res/0.9-noScrolling-preparing-rendering-circularProgress/carta-30-1.txt
+
+res/0.9-preparing-rendering-controls/carta-30-1-allUltraSmooth.txt
+
+res/0.9-preparing-rendering-autoplay-noControls/carta-30-1-allUltraSmooth.txt
+
+(smooth texture????)
+
+apps consuming too much energy??
+
+./formatter
+Introduzca el nombre del archivo origen (extensión .json): data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_22_33_07.136.json
+Introduzca el nombre del archivo destino (extensión .txt): res/0.9-not_preparing-not_rendering/carta-29-10.txt
+
+./formatter
+Introduzca el nombre del archivo origen (extensión .json): data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_22_42_31.613.json
+Introduzca el nombre del archivo destino (extensión .txt): res/0.9-not_preparing-not_rendering/carta-29-11.txt
+
+./formatter
+Introduzca el nombre del archivo origen (extensión .json): data/0.9-not_preparing-not_rendering/dart_devtools_2023-06-29_23_00_20.790.json
+Introduzca el nombre del archivo destino (extensión .txt): res/0.9-not_preparing-not_rendering/carta-29-13.txt   
+
+MEMORY LEAKS??
